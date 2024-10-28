@@ -1,0 +1,27 @@
+<label>Primer Número: <input type="text" [(ngModel)]="valor1"></label><br>
+<label>Segundo Número: <input type="text" [(ngModel)]="valor2"></label><br>
+
+<label>
+  Suma <input type="radio" name="operar" value="suma" [(ngModel)]="operacion">
+</label>
+<label>
+  Resta <input type="radio" name="operar" value="resta" [(ngModel)]="operacion">
+</label>
+<label>
+  Multiplicación <input type="radio" name="operar" value="multiplicacion" [(ngModel)]="operacion">
+</label>
+<label>
+  División <input type="radio" name="operar" value="division" [(ngModel)]="operacion">
+</label><br>
+
+<button (click)="operar()">Operar</button>
+<button (click)="listar()">Listar</button>
+<h4>Resultado: {{ resultado }}</h4>
+
+
+
+<h1>Listas</h1>
+<div *ngFor="let operacion of operaciones">
+    {{operaciones.valor1}} {{operaciones.operacion}} {{operaciones.valor2}} {{operaciones.resultado}}
+    <button>Eliminar</button>
+</div>
